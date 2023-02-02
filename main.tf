@@ -59,7 +59,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
 }
 
 module "diagnostic_settings" {
-  source = "git::https://github.com/OmerBrumer/module-diagnostic-setting.git"
+  source = "git::https://github.com/OmerBrumer/module-diagnostic-setting.git?ref=dev"
 
   diagonstic_setting_name    = "${azurerm_kubernetes_cluster.aks.name}-diagnostic-setting"
   log_analytics_workspace_id = var.log_analytics_workspace_id
